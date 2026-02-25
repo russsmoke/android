@@ -1,11 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
 }
-kotlin {
-    task("testClasses")
-}
+
 android {
-    namespace = "ru.mirea.nurmukhamedovara.control_lesson1"
+    namespace = "ru.mirea.nurmukhamedovara.buttonclicker"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -13,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "ru.mirea.nurmukhamedovara.control_lesson1"
+        applicationId = "ru.mirea.nurmukhamedovara.buttonclicker"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
