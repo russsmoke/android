@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate()"); // Log.i - информационное сообщение
 
-        // Проверка, не пустой ли Bundle (восстановление после поворота)
         if (savedInstanceState != null) {
             Log.d(TAG, "onCreate() — Восстанавливаем состояние");
         } else {
