@@ -19,18 +19,14 @@ public class AlertDialogFragment extends DialogFragment {
         builder.setTitle("Здравствуй МИРЭА!")
                 .setMessage("Успех близок?")
                 .setIcon(android.R.drawable.ic_dialog_info)
-
                 .setPositiveButton("Иду дальше", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // Вызываем метод Activity
                         if (getActivity() instanceof MainActivity) {
                             ((MainActivity) getActivity()).onOkClicked();
                         }
-                        dialog.dismiss(); // закрываем диалог
+                        dialog.dismiss();
                     }
                 })
-
-                // Нейтральная кнопка (обычно по центру)
                 .setNeutralButton("На паузе", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         if (getActivity() instanceof MainActivity) {
@@ -39,8 +35,6 @@ public class AlertDialogFragment extends DialogFragment {
                         dialog.dismiss();
                     }
                 })
-
-                // Отрицательная кнопка (обычно слева/сверху)
                 .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         if (getActivity() instanceof MainActivity) {
@@ -49,8 +43,6 @@ public class AlertDialogFragment extends DialogFragment {
                         dialog.dismiss();
                     }
                 });
-
-        // Создаем и возвращаем диалог
         return builder.create();
     }
 }
